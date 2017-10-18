@@ -1,0 +1,10 @@
+﻿[
+  {
+    "outputFile": "stylemain.css",
+    "inputFile": "stylemain.scss"
+  },
+  {
+    "outputFile": "size.css",
+    "inputFile": "size.scss"
+  }
+]

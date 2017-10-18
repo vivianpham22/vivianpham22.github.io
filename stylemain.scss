@@ -1,0 +1,228 @@
+﻿@import "Content/normalize.css";
+
+$alignment: center;
+$primaryfont: 'Abel', sans-serif;
+$primarycolor: #c57d7d;
+$secondprimcolor: #63bfb1;
+$writingcolor: #bfb6b6;
+
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    border-radius: $radius;
+}
+
+.wrapper {
+    background-color: #2a2a2c;
+    padding: 10px 30px 0px;
+
+
+    .social {
+        /*background-color: #2a2a2c;*/
+        /*display: flex;*/
+
+        a {
+            text-decoration: none;
+            color: $writingcolor;
+            justify-content: space-between;
+            margin-left: 1.2rem;
+            float: right;
+
+
+
+            &:hover {
+                opacity: .12;
+            }
+        }
+    }
+}
+
+
+.intro {
+    background-color: #2a2a2c;
+    min-height: 600px;
+    max-height: 100%;
+
+    nav {
+
+        a {
+            position: relative;
+            display: inline-block;
+            color: #c57d7d;
+
+            &:hover {
+                text-decoration: line-through;
+                color: white;
+            }
+        }
+
+        ul {
+            padding: 0px;
+        }
+
+        li {
+            display: inline-block;
+            font-size: 20px;
+            font-family: $primaryfont;
+            padding-top: 40px;
+            color: #c57d7d;
+        }
+    }
+
+
+    #name {
+        margin: 0px;
+        font-family: 'Zeyada', cursive;
+        color: $writingcolor;
+        font-size: 12.5vw;
+        padding-top: 120px;
+    }
+
+    #title {
+        font-family: $primaryfont;
+        color: #c57d7d;
+        font-size: 20px;
+    }
+
+    .down-arrow-btn {
+        @include border-radius(50%);
+        width: 50px;
+        height: 50px;
+        border-style: solid;
+        border-color: $secondprimcolor;
+        display: inline-block;
+        margin: 30px auto 10px;
+        color: #fff;
+        font-size: 18px;
+        line-height: 50px;
+    }
+}
+
+
+.about {
+    background-color: #2a2a2c;
+
+
+    #littleAbout {
+        padding-top: 30px;
+        margin: 0px;
+        font-family: $primaryfont;
+        font-size: 5.5vw;
+        word-spacing: 8px;
+        letter-spacing: 3px;
+        color: $secondprimcolor;
+    }
+
+    img {
+        padding-top: 60px;
+    }
+
+    p {
+        padding-top: 40px;
+        padding-bottom: 100px;
+        color: $writingcolor;
+    }
+}
+
+
+.work {
+    @extend .intro;
+
+
+    #port {
+        font-family: $primaryfont;
+        color: $secondprimcolor;
+        letter-spacing: 12px;
+        font-size: 6.5vw;
+        max-width: 100%;
+        padding-top: 30px;
+        margin: 15px 0px 10px 0px;
+    }
+
+    .slides {
+        margin-bottom: 20px;
+
+        li {
+            display: inline-block;
+        }
+
+        img {
+            min-height: 220px;
+            max-height: 220px;
+
+            &:hover {
+                opacity: .2;
+            }
+        }
+
+        h3 {
+            font-family: $primaryfont;
+            color: $writingcolor;
+
+            &:after {
+                content: " ";
+                border: solid 2px $secondprimcolor;
+                display: block;
+                width: 35px;
+                margin: 15px auto;
+            }
+        }
+
+        p {
+            color: $writingcolor;
+        }
+    }
+}
+
+
+.contact {
+    /*@extend .intro;*/
+    background-color: #2a2a2c;
+    min-height: 600px;
+    max-height: 600px;
+
+    #getInContact {
+        font-family: $primaryfont;
+        font-size: 40px;
+        letter-spacing: -4px;
+        color: $writingcolor;
+        padding-top: 200px;
+        margin: 0px 0px 5px 0px;
+    }
+
+    .contactButtons {
+        padding: 0px;
+
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0px;
+        }
+
+        li {
+            display: inline-block;
+
+
+            .social-button {
+                color: $secondprimcolor;
+
+                &:hover {
+                    /*color: #d5dbdb;*/
+                    opacity: .89;
+                }
+            }
+        }
+    }
+}
+
+footer {
+    background-color: #2a2a2c;
+    color: $writingcolor;
+    margin: 0px;
+    padding: 0px;
+
+    p {
+        margin-bottom: 0px;
+        text-align: right;
+    }
+}
